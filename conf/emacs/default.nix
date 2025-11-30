@@ -5,7 +5,7 @@
   inherit (pkgs) lib;
   inherit (inputs) self;
   org = inputs.org-babel.lib;
-  emacsPackage = inputs.nixpkgs.legacyPackages.${pkgs.system}.emacs-pgtk;
+  emacsPackage = inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system}.emacs-pgtk;
 in
   (inputs.twist.lib.makeEnv {
     inherit emacsPackage pkgs;

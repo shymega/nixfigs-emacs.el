@@ -67,5 +67,5 @@
       type = "github";
     };
   };
-  outputs = { ... }: { };
+  outputs = {...}: {};
 }
